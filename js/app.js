@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (canvas && !prefersReducedMotion) {
     const ctx = canvas.getContext('2d');
-    let width = canvas.width = window.innerWidth;
+    let width = canvas.width = document.documentElement.clientWidth;
     let height = canvas.height = canvas.parentElement.offsetHeight;
     let particles = [];
 
     window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
+      width = canvas.width = document.documentElement.clientWidth;
       height = canvas.height = canvas.parentElement.offsetHeight;
     });
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const particleCount = window.innerWidth < 768 ? 18 : 40;
+    const particleCount = document.documentElement.clientWidth < 768 ? 18 : 40;
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }

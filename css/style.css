@@ -64,6 +64,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -72,6 +74,8 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -115,6 +119,7 @@ button, input, select, textarea {
   margin-right: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* Utilities */
@@ -163,6 +168,8 @@ button, input, select, textarea {
 .section {
   padding: 5.5rem 0;
   position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .section-header {
